@@ -1,0 +1,687 @@
+{
+    "host":"10.1.68.100:3012",
+    "basePath":"/b12-api-web",
+    "schemes":"http",
+    "paths":{
+            "/":{
+                "get":{
+                    "summary":"Welcome to B12 Web API.",
+                    "description":"",
+                    "produces":["application/json"],
+                    "parameters":[],
+                    "responses":"200"
+                } 
+            },
+            "/all-jobs":{
+                "get":{
+                    "summary":{ "id": 1,
+                        "areaNo": "04",
+                        "machineNo": "01",
+                        "factory": "B12",
+                        "process": "Forming",
+                        "machineName": "End Forming 3 OMS Step Horizontal No.1",
+                        "status": "Shutdown",
+                        "counter": 0,
+                        "jobID": "1850000269",
+                        "mainPartNo": "",
+                        "mainPartName": null,
+                        "subPartNo": "",
+                        "subPartName": null,
+                        "startDate": "2021-01-01",
+                        "endDate": "2021-12-31",
+                        "target": 1000,
+                        "datetime": "2021-11-30 14:00:58",
+                        "qty": null,
+                        "unit": null,
+                        "stdCost": null,
+                        "stdCycleTime": null,
+                        "customerName": null,
+                        "customerID": null,
+                        "nextProcess": "",
+                        "ng": "0",
+                        "action": "Opened",
+                        "remark": null},
+                    "description":"Machines that are open for jobs.",
+                    "produces":["application/json"],
+                    "parameters":[],
+                    "responses":"200"
+                } 
+            },
+            "/machine-info/:areaNo/:machineNo":{
+                "get":{
+                    "summary":{"id": 1,
+                        "areaNo": "08",
+                        "machineNo": "01",
+                        "factory": "B12",
+                        "process": "Bending",
+                        "machineName": "BENDING OMS + Robot + Auto Load No.1\r\n",
+                        "status": "Online",
+                        "counter": 0,
+                        "jobID": null,
+                        "mainPartNo": null,
+                        "mainPartName": null,
+                        "subPartNo": null,
+                        "subPartName": null,
+                        "startDate": null,
+                        "endDate": null,
+                        "target": null,
+                        "datetime": null,
+                        "qty": null,
+                        "unit": null,
+                        "stdCost": null,
+                        "stdCycleTime": null,
+                        "customerName": null,
+                        "customerID": null,
+                        "nextProcess": null,
+                        "ng": null,
+                        "action": null,
+                        "remark": null},
+                    "description":"Machine information.",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   "name":"areaNo",
+                            "in":"Path Variables",
+                            "description":"Area No.",
+                            "required": true,
+                            "type": "number"
+                        },
+                        {
+                            "name":"machineNo",
+                            "in":"Path Variables",
+                            "description":"machine No.",
+                            "required": true,
+                            "type": "number"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/found-bom-part":{
+                "post":{
+                    "summary":[
+                        {
+                          "subPartNo": "10000029",
+                          "subPartName": "CU.LWC 5.0X0.5"
+                        }
+                      ],
+                    "description":"bom Part.",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"mainPartNo",
+                            "in":"body",
+                            "description":"PartNo",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/open-jobs":{
+                "post":{
+                    "summary":"",
+                    "description":"Open Jobs",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"areaNo",
+                            "in":"body",
+                            "description":"Area No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"machineNo",
+                            "in":"body",
+                            "description":"Machine No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"jobID",
+                            "in":"body",
+                            "description":"Job ID.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"mainPartNo",
+                            "in":"body",
+                            "description":"MainPart No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"subPartNo",
+                            "in":"body",
+                            "description":"SubPart No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"startDate",
+                            "in":"body",
+                            "description":"StartDate.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"endDate",
+                            "in":"body",
+                            "description":"EndDate.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"target",
+                            "in":"body",
+                            "description":"target.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/edit-jobs":{
+                "post":{
+                    "summary":"",
+                    "description":"Edit Jobs",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"areaNo",
+                            "in":"body",
+                            "description":"Area No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"machineNo",
+                            "in":"body",
+                            "description":"Machine No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"jobID",
+                            "in":"body",
+                            "description":"Job ID.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"mainPartNo",
+                            "in":"body",
+                            "description":"MainPart No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"target",
+                            "in":"body",
+                            "description":"target.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            }, 
+            "/closed-jobs":{
+                "post":{
+                    "summary":"",
+                    "description":"Closed Jobs",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"areaNo",
+                            "in":"body",
+                            "description":"Area No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"machineNo",
+                            "in":"body",
+                            "description":"Machine No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"jobID",
+                            "in":"body",
+                            "description":"Job ID.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"mainPartNo",
+                            "in":"body",
+                            "description":"MainPart No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"subPartNo",
+                            "in":"body",
+                            "description":"SubPart No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"startDate",
+                            "in":"body",
+                            "description":"StartDate.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"endDate",
+                            "in":"body",
+                            "description":"EndDate.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"target",
+                            "in":"body",
+                            "description":"target.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"counter",
+                            "in":"body",
+                            "description":"counter.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"nextProcess",
+                            "in":"body",
+                            "description":"nextProcess.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"ng",
+                            "in":"body",
+                            "description":"ng.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/cancel-jobs":{
+                "post":{
+                    "summary":"",
+                    "description":"/cancel-jobs",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"areaNo",
+                            "in":"body",
+                            "description":"Area No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"machineNo",
+                            "in":"body",
+                            "description":"Machine No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"jobID",
+                            "in":"body",
+                            "description":"Job ID.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"mainPartNo",
+                            "in":"body",
+                            "description":"MainPart No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"subPartNo",
+                            "in":"body",
+                            "description":"SubPart No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"startDate",
+                            "in":"body",
+                            "description":"StartDate.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"endDate",
+                            "in":"body",
+                            "description":"EndDate.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"target",
+                            "in":"body",
+                            "description":"target.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"counter",
+                            "in":"body",
+                            "description":"counter.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"nextProcess",
+                            "in":"body",
+                            "description":"nextProcess.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"ng",
+                            "in":"body",
+                            "description":"ng.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/sap":{
+                "get":{
+                    "summary":{
+                        "ORDER_ID": "1840000273",
+                        "PARTNO": "30014094",
+                        "PARTNAME": "E204-0059-2019-00 CU.7.94x0.7x40 LWC",
+                        "TARGET": 24000,
+                        "CREATEDATE": "2021-12-02",
+                        "STDCOST": 2.77,
+                        "CYCLETIME": 0,
+                        "STARTDATE": "2021-11-24",
+                        "ENDDATE": "2021-12-02"
+                    },
+                    "description":"information from sap.",
+                    "produces":["application/json"],
+                    "parameters":[],
+                    "responses":"200"
+                } 
+            },
+            "/process-jobs/:process":{
+                "get":{
+                    "summary":{
+                        "id": 9,
+                        "areaNo": "11",
+                        "machineNo": "09",
+                        "factory": "B12",
+                        "process": "Cutting",
+                        "machineName": "CUTTING AUTO No.4",
+                        "status": "Stop",
+                        "counter": 0,
+                        "jobID": "1840001070",
+                        "mainPartNo": "30007619",
+                        "mainPartName": "9386868006 OUTLET PIPE COND A",
+                        "subPartNo": "30011941",
+                        "subPartName": "9386870009 CU.5.0X0.5X90 LWC",
+                        "startDate": "2021-12-21",
+                        "endDate": "2021-12-25",
+                        "target": 1450,
+                        "datetime": "2021-12-21 09:11:12",
+                        "qty": "1.0",
+                        "unit": "PC",
+                        "stdCost": "",
+                        "stdCycleTime": "",
+                        "customerName": "",
+                        "customerID": "",
+                        "nextProcess": "",
+                        "ng": "",
+                        "action": "Opened",
+                        "remark": ""
+                    },
+                    "description":"information from sap.",
+                    "produces":["application/json"],
+                    "parameters":[{   
+                        "name":"process",
+                        "in":"Path Variables",
+                        "description":"process (cutting, bending, forming, brazing).",
+                        "required": true,
+                        "type": "string"
+                    }],
+                    "responses":"200"
+                } 
+            },
+            "/report-jobs":{
+                "post":{
+                    "summary":[ {
+                        "id": 34,
+                        "areaNo": "11",
+                        "machineNo": "06",
+                        "jobID": "1840001065",
+                        "mainPartNo": "40004104",
+                        "subPartNo": "30013376",
+                        "startDate": "2021-12-21",
+                        "endDate": "2021-12-23",
+                        "target": 1152,
+                        "counter": 14639,
+                        "nextProcess": "Bending",
+                        "ng": "{\"total\":null,\"allCase\":[{\"id\":1,\"process\":\"Cutting\",\"caseNo\":\"01\",\"caseDescription\":\"ปลายท่องุ้ม\",\"quantity\":0},{\"id\":2,\"process\":\"Cutting\",\"caseNo\":\"02\",\"caseDescription\":\"เป็นรอยClampจับ\",\"quantity\":0}]}",
+                        "datetime": "2021-12-22 08:45:18",
+                        "action": "Closed",
+                        "mainPartName": "9383133008 COPPER PIPE",
+                        "subPartName": "9383133008 CU.12.7x0.8x64 LWC",
+                        "qty": "1.0",
+                        "unit": "PC",
+                        "stdCost": "",
+                        "stdCycleTime": "",
+                        "customerName": "",
+                        "customerID": "",
+                        "remark": "",
+                        "machineName": "CUTTING AUTO No.1",
+                        "process": "Cutting"
+                    }],
+                    "description":"report-jobs.",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"mode",
+                            "in":"body",
+                            "description":"Jobs order filter(finished, inprocess).",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/ng-case":{
+                "post":{
+                    "summary":{
+                        "id": 1,
+                        "process": "Cutting",
+                        "caseNo": "01",
+                        "caseDescription": "ปลายท่องุ้ม"
+                      },
+                    "description":"ng case.",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"process",
+                            "in":"body",
+                            "description":"process (cutting, bending, forming, brazing).",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/graph-hour":{
+                "post":{
+                    "summary":"",
+                    "description":"graph-hour",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"areaNo",
+                            "in":"body",
+                            "description":"Area No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"machineNo",
+                            "in":"body",
+                            "description":"Machine No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"jobID",
+                            "in":"body",
+                            "description":"Job ID.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/chart-hour":{
+                "post":{
+                    "summary":"",
+                    "description":"chart-hour",
+                    "produces":["application/json"],
+                    "parameters":[
+                        {   
+                            "name":"areaNo",
+                            "in":"body",
+                            "description":"Area No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"machineNo",
+                            "in":"body",
+                            "description":"Machine No.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"jobID",
+                            "in":"body",
+                            "description":"Job ID.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"datetimeStart",
+                            "in":"body",
+                            "description":"DatetimeStart.",
+                            "required": true,
+                            "type": "string"
+                        },
+                        {   
+                            "name":"datetimeEnd",
+                            "in":"body",
+                            "description":"DatetimeEnd.",
+                            "required": true,
+                            "type": "string"
+                        }
+                    ],
+                    "responses":"200"
+                } 
+            },
+            "/all-machine":{
+                "get":{
+                    "summary":{
+                        "id": 1,
+                        "areaNo": "02",
+                        "machineNo": "01",
+                        "factory": "B12",
+                        "process": "Packing",
+                        "machineName": " Packing No.1",
+                        "status": "Shutdown",
+                        "counter": 0,
+                        "jobID": null,
+                        "mainPartNo": null,
+                        "mainPartName": null,
+                        "subPartNo": null,
+                        "subPartName": null,
+                        "startDate": null,
+                        "endDate": null,
+                        "target": null,
+                        "datetime": null,
+                        "qty": null,
+                        "unit": null,
+                        "stdCost": null,
+                        "stdCycleTime": null,
+                        "customerName": null,
+                        "customerID": null,
+                        "nextProcess": null,
+                        "ng": null,
+                        "action": null,
+                        "remark": null,
+                        "cStartDate": null,
+                        "cEndDate": null
+                      },
+                    "description":"All Machine.",
+                    "produces":["application/json"],
+                    "parameters":[],
+                    "responses":"200"
+                } 
+            },
+            "/all-status-counter":{
+                "get":{
+                    "summary":{
+                        "process": "Cutting",
+                        "mShutdown": 14,
+                        "mOnline": 3,
+                        "mStop": 1,
+                        "mAlarm": 5,
+                        "mCounter": 20497
+                    },
+                    "description":"All Status Counter.",
+                    "produces":["application/json"],
+                    "parameters":[],
+                    "responses":"200"
+                } 
+            },
+            "/acknowledge-notified":{
+                "post":{
+                    "summary":"",
+                    "description":"update acknowledge notified.",
+                    "produces":["application/json"],
+                    "parameters":[{   
+                        "name":"piName",
+                        "in":"body",
+                        "description":"piName.",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {   
+                        "name":"datetime",
+                        "in":"body",
+                        "description":"datetime",
+                        "required": true,
+                        "type": "string"
+                    }],
+                    "responses":"200"
+                } 
+            }
+        }
+}
