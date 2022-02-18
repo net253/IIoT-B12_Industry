@@ -1,0 +1,132 @@
+[
+    {
+        "ORDER_ID":"1850000268",
+        "TARGET":1500,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":3486.2500,
+        "PARTNO":"40005024",
+        "PARTNAME":"9388108001 OUT PP (COND)"
+    },
+    {
+        "ORDER_ID":"1850000264",
+        "TARGET":1500,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":2486,
+        "PARTNO":"40005023",
+        "PARTNAME":"9388132006 EXIT PIPE"
+    },
+    {
+        "ORDER_ID":"1850000276",
+        "TARGET":900,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":5186.500,
+        "PARTNO":"30013323",
+        "PARTNAME":"9373873075 CU.6.35X0.7X245 LWC"
+    },
+    {
+        "ORDER_ID":"1850000286",
+        "TARGET":700,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":4861.2500,
+        "PARTNO":"30013327",
+        "PARTNAME":"9373873037 CU.6.35X0.7X225 LWC"
+    },
+    {
+        "ORDER_ID":"1850000289",
+        "TARGET":1000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":5564,
+        "PARTNO":"30014006",
+        "PARTNAME":"9373873037 CU.6.35X0.7X225 LWC"
+    },
+    {
+        "ORDER_ID":"1850000269",
+        "TARGET":1000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":565,
+        "PARTNO":"30013998",
+        "PARTNAME":"U0605399 E CU.6.35X0.7X130 B"
+    },
+    {
+        "ORDER_ID":"1850000280",
+        "TARGET":1000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":2655,
+        "PARTNO":"30013328",
+        "PARTNAME":"9373873020 CU.6.35X0.7X283 LWC"
+    },
+    {
+        "ORDER_ID":"1850000282",
+        "TARGET":1000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":3854,
+        "PARTNO":"40004030",
+        "PARTNAME":"9371275123 SUCTION COPPER PIPE"
+    },
+    {
+        "ORDER_ID":"1850000260",
+        "TARGET":2000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":8742,
+        "PARTNO":"30007615",
+        "PARTNAME":"9386897006 LIT PP (EVA) C"
+    },
+    {
+        "ORDER_ID":"1850000259",
+        "TARGET":1000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":8832,
+        "PARTNO":"40005023",
+        "PARTNAME":"9388132006 EXIT PIPE"
+    },
+    {
+        "ORDER_ID":"1850000263",
+        "TARGET":1000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":1572,
+        "PARTNO":"30013118",
+        "PARTNAME":"9373847120 CU.4.76X0.7X365 LWC"
+    },
+    {
+        "ORDER_ID":"1850000267",
+        "TARGET":1500,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":1882,
+        "PARTNO":"40004918",
+        "PARTNAME":"9322486004 PIPE(SUCTION)A"
+    },
+    {
+        "ORDER_ID":"1850000278",
+        "TARGET":1000,
+        "MACHINE_ID":"111",
+        "STATUS":"Open",
+        "CREATEDATE":"20210730",
+        "STDCOST":3872,
+        "PARTNO":"30013388",
+        "PARTNAME":"9386847001 CU.15.88X1.0X1086 LWC"
+    }
+]
